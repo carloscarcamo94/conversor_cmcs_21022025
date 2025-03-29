@@ -26,7 +26,7 @@ async function recordVideo(){
 
         let chunks = [];
         window.recorder.ondataavailable = function(event){
-            if(event.data.size <= 0){
+            if(event.data.size > 0){
                 chunks.push(event.data);
             }
         };
