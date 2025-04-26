@@ -64,7 +64,7 @@ function geolocalizacion(){
 function _onGetCurrentLocation(){
     const options ={
         enableHighAccuracy: true,
-        timeout: 5000,
+        timeout: 10000,
         maximumAge: 0
     };
     navigator.geolocation.getCurrentPosition(function(position){
@@ -80,6 +80,7 @@ function _onGetCurrentLocation(){
         console.log(error);
     },options);
 }
+
 const init = () => {
     const tieneSoporteUserMedia = () =>
         !!(navigator.mediaDevices?.getUserMedia);
